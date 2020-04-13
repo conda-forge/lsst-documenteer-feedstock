@@ -1,13 +1,13 @@
 {% set name = "documenteer" %}  {# PyPI name #}
-{% set version = "0.5.6" %}
+{% set version = "0.5.8" %}
 
 package:
-  name: "lsst-documenteer"
-  version: "{{ version }}"
+  name: lsst-documenteer
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "06fbceb7324ed3b00f012b90b2da0e0aff9faab7957d6d7c5f09cc5a3069c9cf"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4988d7eea7986bb6ea498eca863b2eb12914a5ec0d2287868a2940aeb543b278
 
 build:
   number: 0
@@ -46,13 +46,13 @@ outputs:
         - documenteer.sphinxext.lssttasks
         - documenteer.stackdocs
     about:
-      home: "https://github.com/lsst-sqre/documenteer"
-      license: "MIT"
-      license_family: "MIT"
-      license_file: "LICENSE"
-      summary: "Documenteer provides tools, extensions, and configurations for Vera Rubin Observatory Legacy Survey of Space and Time (LSST) Sphinx documentation projects."
-      doc_url: "https://documenteer.lsst.io/"
-      dev_url: "https://github.com/lsst-sqre/documenteer"
+      home: https://github.com/lsst-sqre/documenteer
+      license: MIT
+      license_family: MIT
+      license_file: LICENSE
+      summary: Documenteer provides tools, extensions, and configurations for Vera Rubin Observatory Legacy Survey of Space and Time (LSST) Sphinx documentation projects.
+      doc_url: https://documenteer.lsst.io/
+      dev_url: https://github.com/lsst-sqre/documenteer
 
   - name: lsst-documenteer-technote
     requirements:
@@ -65,13 +65,13 @@ outputs:
       commands:
         - refresh-lsst-bib --help
     about:
-      home: "https://github.com/lsst-sqre/documenteer"
-      license: "MIT"
-      license_family: "MIT"
-      license_file: "LICENSE"
-      summary: "Meta package for Rubin Observatory LSST technical note projects."
-      doc_url: "https://documenteer.lsst.io/"
-      dev_url: "https://github.com/lsst-sqre/documenteer"
+      home: https://github.com/lsst-sqre/documenteer
+      license: MIT
+      license_family: MIT
+      license_file: LICENSE
+      summary: Meta package for Rubin Observatory LSST technical note projects.
+      doc_url: https://documenteer.lsst.io/
+      dev_url: https://github.com/lsst-sqre/documenteer
 
   - name: lsst-documenteer-pipelines
     requirements:
@@ -86,17 +86,17 @@ outputs:
         - sphinxcontrib-autoprogram >=0.1.5,<0.2.0
     test:
       commands:
-         - stack-docs --help
-         - package-docs --help
-         - build-stack-docs --help
+        - stack-docs --help
+        - package-docs --help
+        - build-stack-docs --help
     about:
-      home: "https://github.com/lsst-sqre/documenteer"
-      license: "MIT"
-      license_family: "MIT"
-      license_file: "LICENSE"
-      summary: "Meta package for Rubin Observatory LSST Science Pipelines documentation."
-      doc_url: "https://documenteer.lsst.io/"
-      dev_url: "https://github.com/lsst-sqre/documenteer"
+      home: https://github.com/lsst-sqre/documenteer
+      license: MIT
+      license_family: MIT
+      license_file: LICENSE
+      summary: Meta package for Rubin Observatory LSST Science Pipelines documentation.
+      doc_url: https://documenteer.lsst.io/
+      dev_url: https://github.com/lsst-sqre/documenteer
 
 
 extra:
