@@ -29,14 +29,13 @@ outputs:
         - setuptools
         - setuptools_scm
       run:
-        - python >=3.6
-        - sphinx >=1.6
+        - python >=3.7
+        - sphinx >=2.0
         - click
         - gitpython
         - pyyaml
         - requests
-        - sphinx-prompt
-        - pybtex
+        - sphinxcontrib-bibtex
     test:
       imports:
         - documenteer
@@ -58,9 +57,8 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage("documenteer", exact=True) }}
-        - sphinx >=1.7.0,<1.8.0
-        - lsst-dd-rtd-theme ==0.2.3
-        - sphinxcontrib-bibtex ==0.4.0
+        - lsst-dd-rtd-theme >=0.2.0,<0.3.0
+        - sphinx-prompt
     test:
       commands:
         - refresh-lsst-bib --help
@@ -77,13 +75,14 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage("documenteer", exact=True) }}
-        - sphinx >=1.7.0,<1.8.0
         - lsst-sphinx-bootstrap-theme >=0.2.0,<0.3.0
-        - numpydoc >=0.8.0,<0.9.0
-        - sphinx-automodapi >=0.7,<0.8
-        - breathe
-        - sphinx-jinja ==1.1.1
-        - sphinxcontrib-autoprogram >=0.1.5,<0.2.0
+        - numpydoc
+        - sphinx-automodapi
+        - sphinx-jinja
+        - sphinx-prompt
+        - sphinx-click
+        - sphinxcontrib-doxylink
+        - sphinxcontrib-autoprogram
     test:
       commands:
         - stack-docs --help
