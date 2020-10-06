@@ -97,6 +97,14 @@ outputs:
       doc_url: https://documenteer.lsst.io/
       dev_url: https://github.com/lsst-sqre/documenteer
 
+about:
+  home: https://github.com/lsst-sqre/documenteer
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Documenteer provides tools, extensions, and configurations for Vera Rubin Observatory Legacy Survey of Space and Time (LSST) Sphinx documentation projects.
+  doc_url: https://documenteer.lsst.io/
+  dev_url: https://github.com/lsst-sqre/documenteer
 
 extra:
   recipe-maintainers:
