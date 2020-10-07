@@ -1,5 +1,5 @@
 {% set name = "documenteer" %}  {# PyPI name #}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: lsst-documenteer
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3325f06e3a725cb485bec22f8ebe302e4ca721465cac493f3548b9abef96e88b
+  sha256: 6c9fb36ab40b50b8a6a5b2ad236c745fe6e2b6a328bab8f389e1042353be8ee1
 
 build:
   number: 0
