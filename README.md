@@ -5,11 +5,13 @@ Home: https://github.com/lsst-sqre/documenteer
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lsst-documenteer-feedstock/blob/master/LICENSE.txt)
 
 Summary: Documenteer provides tools, extensions, and configurations for Vera Rubin Observatory Legacy Survey of Space and Time (LSST) Sphinx documentation projects.
 
+Development: https://github.com/lsst-sqre/documenteer
 
+Documentation: https://documenteer.lsst.io/
 
 Current build status
 ====================
