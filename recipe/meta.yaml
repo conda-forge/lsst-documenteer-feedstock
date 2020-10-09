@@ -83,6 +83,7 @@ outputs:
         - sphinx-click
         - sphinxcontrib-doxylink
         - sphinxcontrib-autoprogram
+        - graphviz
     test:
       commands:
         - stack-docs --help
