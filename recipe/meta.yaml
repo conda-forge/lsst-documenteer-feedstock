@@ -35,7 +35,7 @@ outputs:
         - gitpython
         - pyyaml
         - requests
-        - sphinxcontrib-bibtex
+        - sphinxcontrib-bibtex >=2.0
     test:
       imports:
         - documenteer
