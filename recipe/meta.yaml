@@ -33,7 +33,7 @@ outputs:
         - setuptools_scm
       run:
         - python >=3.7
-        - sphinx >=2.0
+        - sphinx >=2.4
         - click
         - gitpython
         - pyyaml
