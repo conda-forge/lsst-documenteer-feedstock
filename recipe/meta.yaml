@@ -59,6 +59,31 @@ outputs:
       doc_url: https://documenteer.lsst.io/
       dev_url: https://github.com/lsst-sqre/documenteer
 
+  - name: lsst-documenteer-guide
+    requirements:
+      run:
+        - {{ pin_subpackage("documenteer", exact=True) }}
+        - sphinx-prompt
+        - pydata-sphinx-theme
+        - sphinx-autodoc-typehints
+        - sphinx-automodapi
+        - sphinx-copybutton
+        - markdown-it-py
+        - sphinxcontrib-mermaid
+        - sphinxext-opengraph
+        - sphinx-design
+    test:
+      imports:
+        - documenteer
+    about:
+      home: https://github.com/lsst-sqre/documenteer
+      license: MIT
+      license_family: MIT
+      license_file: LICENSE
+      summary: Meta package for Rubin Observatory LSST technical note projects.
+      doc_url: https://documenteer.lsst.io/
+      dev_url: https://github.com/lsst-sqre/documenteer
+
   - name: lsst-documenteer-technote
     requirements:
       run:
