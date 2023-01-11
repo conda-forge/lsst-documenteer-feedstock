@@ -1,5 +1,5 @@
 {% set name = "documenteer" %}  {# PyPI name #}
-{% set version = "0.6.14" %}
+{% set version = "0.7.0" %}
 
 package:
   name: lsst-documenteer
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e07a693b8a61de7754dc6174c05b08227b70370e25e4a705d42176a3947632d4
+  sha256: cf5b2cd95a1ca956124b4c26ca7dd7ac6433f30a997b56fa8424edc73962c3a1
 
 build:
   number: 0
@@ -39,6 +39,9 @@ outputs:
         - pyyaml
         - requests
         - sphinxcontrib-bibtex >=2.0
+        - importlib_metadata
+        - tomli
+        - pydantic
     test:
       imports:
         - documenteer
@@ -53,6 +56,31 @@ outputs:
       license_family: MIT
       license_file: LICENSE
       summary: Documenteer provides tools, extensions, and configurations for Vera Rubin Observatory Legacy Survey of Space and Time (LSST) Sphinx documentation projects.
+      doc_url: https://documenteer.lsst.io/
+      dev_url: https://github.com/lsst-sqre/documenteer
+
+  - name: lsst-documenteer-guide
+    requirements:
+      run:
+        - {{ pin_subpackage("documenteer", exact=True) }}
+        - sphinx-prompt
+        - pydata-sphinx-theme
+        - sphinx-autodoc-typehints
+        - sphinx-automodapi
+        - sphinx-copybutton
+        - markdown-it-py
+        - sphinxcontrib-mermaid
+        - sphinxext-opengraph
+        - sphinx-design
+    test:
+      imports:
+        - documenteer
+    about:
+      home: https://github.com/lsst-sqre/documenteer
+      license: MIT
+      license_family: MIT
+      license_file: LICENSE
+      summary: Meta package for Rubin Observatory LSST technical note projects.
       doc_url: https://documenteer.lsst.io/
       dev_url: https://github.com/lsst-sqre/documenteer
 
