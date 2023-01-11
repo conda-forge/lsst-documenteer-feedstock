@@ -10,7 +10,7 @@ source:
   sha256: cf5b2cd95a1ca956124b4c26ca7dd7ac6433f30a997b56fa8424edc73962c3a1
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: documenteer
