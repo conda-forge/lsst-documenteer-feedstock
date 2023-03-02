@@ -1,13 +1,52 @@
+About lsst-documenteer-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lsst-documenteer-feedstock/blob/main/LICENSE.txt)
+
 About lsst-documenteer
-======================
+----------------------
 
 Home: https://github.com/lsst-sqre/documenteer
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lsst-documenteer-feedstock/blob/main/LICENSE.txt)
-
 Summary: Documenteer provides tools, extensions, and configurations for Vera Rubin Observatory Legacy Survey of Space and Time (LSST) Sphinx documentation projects.
+
+Development: https://github.com/lsst-sqre/documenteer
+
+Documentation: https://documenteer.lsst.io/
+About lsst-documenteer-guide
+----------------------------
+
+Home: https://github.com/lsst-sqre/documenteer
+
+Package license: MIT
+
+Summary: Meta package for Rubin Observatory LSST technical note projects.
+
+Development: https://github.com/lsst-sqre/documenteer
+
+Documentation: https://documenteer.lsst.io/
+About lsst-documenteer-pipelines
+--------------------------------
+
+Home: https://github.com/lsst-sqre/documenteer
+
+Package license: MIT
+
+Summary: Meta package for Rubin Observatory LSST Science Pipelines documentation.
+
+Development: https://github.com/lsst-sqre/documenteer
+
+Documentation: https://documenteer.lsst.io/
+About lsst-documenteer-technote
+-------------------------------
+
+Home: https://github.com/lsst-sqre/documenteer
+
+Package license: MIT
+
+Summary: Meta package for Rubin Observatory LSST technical note projects.
 
 Development: https://github.com/lsst-sqre/documenteer
 
