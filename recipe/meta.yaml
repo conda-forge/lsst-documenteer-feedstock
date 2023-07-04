@@ -1,5 +1,5 @@
 {% set name = "documenteer" %}  {# PyPI name #}
-{% set version = "0.8.2" %}
+{% set version = "0.8.3" %}
 
 package:
   name: lsst-documenteer
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 30dcd20bb353b5389c5e7578c1eb13edc163c27cec6270bfe3c938eb51d8c164
+  sha256: e1514ca8dd96810a6d24d4b21f7b28458a3cf434217e46939ffab2c201791afc
 
 build:
   number: 0
@@ -41,7 +41,7 @@ outputs:
         - sphinxcontrib-bibtex >=2.0
         - importlib_metadata
         - tomli
-        - pydantic
+        - pydantic <2.0
     test:
       imports:
         - documenteer
