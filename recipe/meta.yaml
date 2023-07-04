@@ -41,7 +41,7 @@ outputs:
         - sphinxcontrib-bibtex >=2.0
         - importlib_metadata
         - tomli
-        - pydantic
+        - pydantic <2.0
     test:
       imports:
         - documenteer
