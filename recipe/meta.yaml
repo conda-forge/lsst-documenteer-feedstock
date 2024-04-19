@@ -1,5 +1,5 @@
 {% set name = "documenteer" %}  {# PyPI name #}
-{% set version = "0.8.3" %}
+{% set version = "0.8.4" %}
 
 package:
   name: lsst-documenteer
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e1514ca8dd96810a6d24d4b21f7b28458a3cf434217e46939ffab2c201791afc
+  sha256: c92a0766766bcdcbbbd3b06fbb251b5c2dbad41f81be37677cc61fbd58604594
 
 build:
   number: 0
@@ -33,7 +33,7 @@ outputs:
         - setuptools_scm
       run:
         - python >=3.7
-        - sphinx >=2.4
+        - sphinx >=2.4,<7.0
         - click
         - gitpython
         - pyyaml
