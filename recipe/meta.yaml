@@ -39,7 +39,7 @@ outputs:
         - pyyaml
         - requests
         - sphinxcontrib-bibtex >=2.0
-        - importlib_metadata
+        - importlib-metadata
         - tomli
         - pydantic
     test:
