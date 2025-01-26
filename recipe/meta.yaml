@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: c92a0766766bcdcbbbd3b06fbb251b5c2dbad41f81be37677cc61fbd58604594
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: documenteer
@@ -27,12 +27,12 @@ outputs:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
-        - python >=3.0
+        - python {{ python_min }}
         - pip
         - setuptools
         - setuptools_scm
       run:
-        - python >=3.7
+        - python >={{ python_min }}
         - sphinx >=2.4,<7.0
         - click
         - gitpython
@@ -43,6 +43,8 @@ outputs:
         - tomli
         - pydantic <2.0
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - documenteer
         - documenteer.bin
