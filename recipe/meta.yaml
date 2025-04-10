@@ -1,12 +1,13 @@
 {% set name = "documenteer" %}  {# PyPI name #}
 {% set version = "1.4.3" %}
+{% set python_min = "3.11" %}
 
 package:
   name: lsst-documenteer
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2b0cb1a5b9982ff8fce7121d479547e754a68bd7628620633653d2a5eeb883b5
 
 build:
@@ -23,10 +24,10 @@ outputs:
         - package-docs = documenteer.stackdocs.packagecli:main
     requirements:
       build:
-        - python >={{ python_min }}                # [build_platform != target_platform]
+        - python {{ python_min }}                # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
-        - python >={{ python_min }}
+        - python {{ python_min }}
         - pip
         - setuptools
         - setuptools_scm
@@ -38,7 +39,7 @@ outputs:
         - pyyaml
         - requests
         - sphinxcontrib-bibtex >=2
-        - importlib_metadata
+        - importlib-metadata
         - tomlkit
         - pydantic >=2
         - git
@@ -56,6 +57,7 @@ outputs:
         - tests/
         - demo/
       requires:
+        - python {{ python_min }}
         - pytest
         - pytest-mock
         - lxml
