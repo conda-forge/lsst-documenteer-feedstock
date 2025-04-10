@@ -18,6 +18,7 @@ outputs:
     build:
       noarch: python
       entry_points:
+        - documenteer = documenteer.cli:main
         - stack-docs = documenteer.stackdocs.stackcli:main
         - package-docs = documenteer.stackdocs.packagecli:main
     requirements:
