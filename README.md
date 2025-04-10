@@ -3,6 +3,7 @@ About lsst-documenteer-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lsst-documenteer-feedstock/blob/main/LICENSE.txt)
 
+
 About lsst-documenteer
 ----------------------
 
@@ -15,6 +16,7 @@ Summary: Documenteer provides tools, extensions, and configurations for Vera Rub
 Development: https://github.com/lsst-sqre/documenteer
 
 Documentation: https://documenteer.lsst.io/
+
 About lsst-documenteer-guide
 ----------------------------
 
@@ -27,6 +29,7 @@ Summary: Meta package for Rubin Observatory LSST technical note projects.
 Development: https://github.com/lsst-sqre/documenteer
 
 Documentation: https://documenteer.lsst.io/
+
 About lsst-documenteer-pipelines
 --------------------------------
 
@@ -39,6 +42,7 @@ Summary: Meta package for Rubin Observatory LSST Science Pipelines documentation
 Development: https://github.com/lsst-sqre/documenteer
 
 Documentation: https://documenteer.lsst.io/
+
 About lsst-documenteer-technote
 -------------------------------
 
@@ -56,65 +60,11 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
+<table><tr><td>All platforms:</td>
     <td>
-      <a href="https://app.travis-ci.com/conda-forge/lsst-documenteer-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/lsst-documenteer-feedstock/main.svg?label=Linux">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8918&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/lsst-documenteer-feedstock?branchName=main">
       </a>
-    </td>
-  </tr>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8918&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/lsst-documenteer-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8918&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/lsst-documenteer-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8918&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/lsst-documenteer-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8918&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/lsst-documenteer-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8918&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/lsst-documenteer-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8918&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/lsst-documenteer-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
     </td>
   </tr>
 </table>
@@ -195,7 +145,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
