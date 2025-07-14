@@ -22,7 +22,7 @@ outputs:
         - documenteer = documenteer.cli:main
     requirements:
       host:
-        - python >={{ python_min }}
+        - python {{ python_min }}
         - pip
         - setuptools
         - setuptools_scm
@@ -41,6 +41,8 @@ outputs:
         - pylatexenc
         - tomlkit
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - documenteer
         - documenteer.cli
