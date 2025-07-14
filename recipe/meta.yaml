@@ -1,16 +1,16 @@
 {% set name = "documenteer" %}  {# PyPI name #}
-{% set version = "0.8.4" %}
+{% set version = "2.0.0" %}
 
 package:
   name: lsst-documenteer
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c92a0766766bcdcbbbd3b06fbb251b5c2dbad41f81be37677cc61fbd58604594
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f7520bfbca2f7f09a53b8326e1b9ed04fcfdf1715088dc21ecd61b4830eb703d
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: documenteer
@@ -18,38 +18,42 @@ outputs:
     build:
       noarch: python
       entry_points:
-        - stack-docs = documenteer.stackdocs.stackcli:main
-        - package-docs = documenteer.stackdocs.packagecli:main
-        - build-stack-docs = documenteer.bin.buildstackdocs:run_build_cli
-        - refresh-lsst-bib = documenteer.bin.refreshlsstbib:run
+        - documenteer = documenteer.cli:main
     requirements:
       build:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
-        - python >=3.0
+        - python >=3.12
         - pip
         - setuptools
         - setuptools_scm
       run:
-        - python >=3.7
-        - sphinx >=2.4,<7.0
-        - click
-        - gitpython
+        - python >=3.12
+        - docutils >=0.20
+        - sphinx >=7,<8.2
         - pyyaml
+        - gitpython
         - requests
-        - sphinxcontrib-bibtex >=2.0
-        - importlib_metadata
-        - tomli
-        - pydantic <2.0
+        - click
+        - sphinxcontrib-bibtex >=2.6.5
+        - pybtex >=0.25.0
+        - pydantic >=2.0.0
+        - urllib3
+        - pylatexenc
+        - tomlkit
     test:
       imports:
         - documenteer
-        - documenteer.bin
-        - documenteer.sphinxconfig
-        - documenteer.sphinxext
-        - documenteer.sphinxext.lssttasks
-        - documenteer.stackdocs
+        - documenteer.cli
+        - documenteer.ext.bibtex
+        - documenteer.ext.githubbibcache
+        - documenteer.ext.jira
+        - documenteer.ext.lsstdocushare
+        - documenteer.ext.mockcoderefs
+        - documenteer.ext.openapi
+        - documenteer.ext.redoc
+        - documenteer.ext.remotecodeblock
     about:
       home: https://github.com/lsst-sqre/documenteer
       license: MIT
@@ -63,20 +67,24 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage("documenteer", exact=True) }}
-        - sphinx-prompt
-        - pydata-sphinx-theme >=0.10.0,<0.13.0
-        - sphinx-autodoc-typehints <1.23.0
+        - autodoc-pydantic
+        - sphinx-design
+        - pydata-sphinx-theme >=0.16.1,<0.17.0
+        - sphinx-autodoc-typehints
         - sphinx-automodapi
         - sphinx-copybutton
+        - sphinx-prompt
+        - sphinx-jinja >=2
         - myst-parser
+        - myst-nb
         - markdown-it-py
         - linkify-it-py
-        - mdit-py-plugins
-        - sphinxcontrib-mermaid
+        - sphinxcontrib-mermaid >=1
         - sphinxext-opengraph
-        - sphinx-design
-        - sphinxcontrib-redoc
         - sphinxcontrib-jquery
+        - sphinxext-rediraffe
+        - sphinxcontrib-youtube
+        - sphinx-favicon
     test:
       imports:
         - documenteer
@@ -93,45 +101,22 @@ outputs:
     requirements:
       run:
         - {{ pin_subpackage("documenteer", exact=True) }}
-        - lsst-dd-rtd-theme >=0.2.0,<0.3.0
+        - technote >=0.9.0,<0.10.0
         - sphinx-prompt
+        - sphinxcontrib-mermaid >=1
+        - sphinx-diagrams
+        - sphinx-design
+        - myst-nb
+        - sphinxcontrib-youtube
     test:
-      commands:
-        - refresh-lsst-bib --help
+      import:
+        - documenteer
     about:
       home: https://github.com/lsst-sqre/documenteer
       license: MIT
       license_family: MIT
       license_file: LICENSE
       summary: Meta package for Rubin Observatory LSST technical note projects.
-      doc_url: https://documenteer.lsst.io/
-      dev_url: https://github.com/lsst-sqre/documenteer
-
-  - name: lsst-documenteer-pipelines
-    requirements:
-      run:
-        - {{ pin_subpackage("documenteer", exact=True) }}
-        - lsst-sphinx-bootstrap-theme >=0.2.0,<0.3.0
-        - numpydoc
-        - sphinx-automodapi
-        - sphinx-jinja
-        - sphinx-prompt
-        - sphinx-click
-        - sphinxcontrib-doxylink
-        - sphinxcontrib-autoprogram
-        - graphviz
-        - sphinxcontrib-jquery
-    test:
-      commands:
-        - stack-docs --help
-        - package-docs --help
-        - build-stack-docs --help
-    about:
-      home: https://github.com/lsst-sqre/documenteer
-      license: MIT
-      license_family: MIT
-      license_file: LICENSE
-      summary: Meta package for Rubin Observatory LSST Science Pipelines documentation.
       doc_url: https://documenteer.lsst.io/
       dev_url: https://github.com/lsst-sqre/documenteer
 
