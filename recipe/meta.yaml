@@ -1,5 +1,6 @@
 {% set name = "documenteer" %}  {# PyPI name #}
 {% set version = "2.0.0" %}
+{% set python_min = "3.12" %}
 
 package:
   name: lsst-documenteer
@@ -20,16 +21,13 @@ outputs:
       entry_points:
         - documenteer = documenteer.cli:main
     requirements:
-      build:
-        - python                                 # [build_platform != target_platform]
-        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
-        - python >=3.12
+        - python >={{ python_min }}
         - pip
         - setuptools
         - setuptools_scm
       run:
-        - python >=3.12
+        - python >={{ python_min }}
         - docutils >=0.20
         - sphinx >=7,<8.2
         - pyyaml
