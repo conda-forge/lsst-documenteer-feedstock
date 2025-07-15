@@ -97,29 +97,6 @@ outputs:
       doc_url: https://documenteer.lsst.io/
       dev_url: https://github.com/lsst-sqre/documenteer
 
-  - name: lsst-documenteer-technote
-    requirements:
-      run:
-        - {{ pin_subpackage("documenteer", exact=True) }}
-        - technote >=0.9.0,<0.10.0
-        - sphinx-prompt
-        - sphinxcontrib-mermaid >=1
-        - sphinx-diagrams
-        - sphinx-design
-        - myst-nb
-        - sphinxcontrib-youtube
-    test:
-      import:
-        - documenteer
-    about:
-      home: https://github.com/lsst-sqre/documenteer
-      license: MIT
-      license_family: MIT
-      license_file: LICENSE
-      summary: Meta package for Rubin Observatory LSST technical note projects.
-      doc_url: https://documenteer.lsst.io/
-      dev_url: https://github.com/lsst-sqre/documenteer
-
 about:
   home: https://github.com/lsst-sqre/documenteer
   license: MIT
