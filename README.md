@@ -24,33 +24,7 @@ Home: https://github.com/lsst-sqre/documenteer
 
 Package license: MIT
 
-Summary: Meta package for Rubin Observatory LSST technical note projects.
-
-Development: https://github.com/lsst-sqre/documenteer
-
-Documentation: https://documenteer.lsst.io/
-
-About lsst-documenteer-pipelines
---------------------------------
-
-Home: https://github.com/lsst-sqre/documenteer
-
-Package license: MIT
-
-Summary: Meta package for Rubin Observatory LSST Science Pipelines documentation.
-
-Development: https://github.com/lsst-sqre/documenteer
-
-Documentation: https://documenteer.lsst.io/
-
-About lsst-documenteer-technote
--------------------------------
-
-Home: https://github.com/lsst-sqre/documenteer
-
-Package license: MIT
-
-Summary: Meta package for Rubin Observatory LSST technical note projects.
+Summary: Meta package for Rubin Observatory user guides.
 
 Development: https://github.com/lsst-sqre/documenteer
 
@@ -95,13 +69,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8918&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/lsst-documenteer-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8918&branchName=main">
@@ -123,8 +90,6 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-documenteer-green.svg)](https://anaconda.org/conda-forge/documenteer) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/documenteer.svg)](https://anaconda.org/conda-forge/documenteer) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/documenteer.svg)](https://anaconda.org/conda-forge/documenteer) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/documenteer.svg)](https://anaconda.org/conda-forge/documenteer) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-lsst--documenteer--guide-green.svg)](https://anaconda.org/conda-forge/lsst-documenteer-guide) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lsst-documenteer-guide.svg)](https://anaconda.org/conda-forge/lsst-documenteer-guide) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lsst-documenteer-guide.svg)](https://anaconda.org/conda-forge/lsst-documenteer-guide) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lsst-documenteer-guide.svg)](https://anaconda.org/conda-forge/lsst-documenteer-guide) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-lsst--documenteer--pipelines-green.svg)](https://anaconda.org/conda-forge/lsst-documenteer-pipelines) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lsst-documenteer-pipelines.svg)](https://anaconda.org/conda-forge/lsst-documenteer-pipelines) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lsst-documenteer-pipelines.svg)](https://anaconda.org/conda-forge/lsst-documenteer-pipelines) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lsst-documenteer-pipelines.svg)](https://anaconda.org/conda-forge/lsst-documenteer-pipelines) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-lsst--documenteer--technote-green.svg)](https://anaconda.org/conda-forge/lsst-documenteer-technote) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lsst-documenteer-technote.svg)](https://anaconda.org/conda-forge/lsst-documenteer-technote) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lsst-documenteer-technote.svg)](https://anaconda.org/conda-forge/lsst-documenteer-technote) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lsst-documenteer-technote.svg)](https://anaconda.org/conda-forge/lsst-documenteer-technote) |
 
 Installing lsst-documenteer
 ===========================
@@ -136,16 +101,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `documenteer, lsst-documenteer-guide, lsst-documenteer-pipelines, lsst-documenteer-technote` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `documenteer, lsst-documenteer-guide` can be installed with `conda`:
 
 ```
-conda install documenteer lsst-documenteer-guide lsst-documenteer-pipelines lsst-documenteer-technote
+conda install documenteer lsst-documenteer-guide
 ```
 
 or with `mamba`:
 
 ```
-mamba install documenteer lsst-documenteer-guide lsst-documenteer-pipelines lsst-documenteer-technote
+mamba install documenteer lsst-documenteer-guide
 ```
 
 It is possible to list all of the versions of `documenteer` available on your platform with `conda`:
