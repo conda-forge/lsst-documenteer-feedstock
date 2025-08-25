@@ -93,7 +93,7 @@ outputs:
       license: MIT
       license_family: MIT
       license_file: LICENSE
-      summary: Meta package for Rubin Observatory LSST technical note projects.
+      summary: Meta package for Rubin Observatory user guides.
       doc_url: https://documenteer.lsst.io/
       dev_url: https://github.com/lsst-sqre/documenteer
 
