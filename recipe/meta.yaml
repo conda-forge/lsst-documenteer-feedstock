@@ -1,5 +1,5 @@
 {% set name = "documenteer" %}  {# PyPI name #}
-{% set version = "2.0.0" %}
+{% set version = "2.2.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f7520bfbca2f7f09a53b8326e1b9ed04fcfdf1715088dc21ecd61b4830eb703d
+  sha256: 78e320cd51d6cf8ea0072a560f04d4573d4e10478a21be281313d458d2b18212
 
 build:
   number: 0
@@ -85,6 +85,7 @@ outputs:
         - sphinxext-rediraffe
         - sphinxcontrib-youtube
         - sphinx-favicon
+        - sphinx-sitemap
     test:
       imports:
         - documenteer
