@@ -85,6 +85,7 @@ outputs:
         - sphinxext-rediraffe
         - sphinxcontrib-youtube
         - sphinx-favicon
+        - sphinx-sitemap
     test:
       imports:
         - documenteer
