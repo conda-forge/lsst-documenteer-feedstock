@@ -1,5 +1,5 @@
 {% set name = "documenteer" %}  {# PyPI name #}
-{% set version = "2.4.0" %}
+{% set version = "2.4.1" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8fa5ec291a88a6855892c35b276be8ddcc6553182c89793e349dc35a3240efb7
+  sha256: 58268cf3c52b2dcbbc1347f45d20baadad96bd53ed2498a032eb2c40b5286751
 
 build:
   number: 0
